@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Crackers</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="main.css">
+
+	</head>
+	<body>
+		
+		<div class="container">
+			<h1 class="heading"> 	&lt; &#47;	 Crackers &gt; </h1>
+			<p>Generate random geeky quotes <br /> that'll crack you up.</p>
+			
+			<div class="quotebox">
+				<span class="quote" id="quote">"Don't be self-conscious, but I love looking at your &lt;body&gt;."</span> <br />
+				<span class="author" id="author" > - Unknown </span>
+			</div>
+			
+			<button id="show" > New Quote </button>
+		</div>
+
+		<!-- ==============SCRIPTS========== -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script>
+			// ====== Programming Quotes API
+			var quote = '';
+			var author = '';
+				$("#show").click(function() {
+					$.getJSON('http://crossorigin.me/http://quotes.stormconsultancy.co.uk/random.json', assignQuote);
+					function assignQuote(data) {
+						quote = data.quote;
+						author = data.author;
+						if (author == '') 
+							author = "Unknown";
+						$(".quote").hide().text(quote).fadeIn('fast');
+						$(".author").hide().text(" - " + author).fadeIn('fast');
+					}
+				});
+		</script>
+	</body>
+</html>

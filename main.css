@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Lato|Indie+Flower');
+
+* {
+	box-sizing:border-box;
+}
+/* background image and gradient */
+body {
+	background: linear-gradient( rgba(149, 225, 211, 0.5), rgba(149, 225, 211, 0.9) ),	url("https://flyaroundmyprettylittlemiss.files.wordpress.com/2011/06/tumblr_lgut2eohst1qft4fko1_500_large.jpg") ;
+	background-size:cover;	background-position: center center; 
+	background-repeat: no-repeat; background-attachment: fixed;
+}
+
+/* other styles */
+.container {
+	text-align:center;
+	max-width:400px;
+	margin: 20px auto;
+	padding: 0 10px;
+}
+
+.heading {
+	font-size:18px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	background:#F38181;
+	color: #fff;
+	padding:10px;
+	font-weight:100;
+	border-radius: 5px 0 5px 0;
+	font-family:"indie flower";
+}
+p {
+	font-style:italic;
+	color:#fff;
+	font-size:18px;
+}
+
+.quotebox {
+	margin: 0 auto;
+	padding: 15px;
+	color:#0E2F56;
+	background: #EAFFD0;
+   box-shadow: 2px 2px 9px #888888;
+	font-family:monospace;
+	min-height:150px;
+	width:90%;  
+	font-size:17px;
+}
+
+.quote {
+	padding-top: 10px;
+	display:block;
+}
+.author {
+	font-style:italic;
+	display: block;
+}
+
+button#show {
+	margin: 20px 0;
+	letter-spacing:1px;
+	background:#F38181;
+	border-radius: 0 5px 0 5px;
+	padding:10px;
+	color:#fff;
+	border:none;
+	cursor:pointer;
+	transition: all 0.2s ease;
+	font-family:"indie flower";
+}
+button#show:hover {
+	letter-spacing:1px;	
+}
+
+@media only screen and (max-width: 400px) {
+	body {
+		height:480px; overflow:hidden; 
+		background: linear-gradient( rgba(149, 225, 211, 0.5), rgba(149, 225, 211, 1) ),
+			url("http://www.lamlett.com/assets/lamlett/archivo/20140813/1638d12aa9576d24f610ffba033ca63e.jpg")  ;
+	background-size:cover; bakground-position:center center; 
+	background-repeat: no-repeat; background-attachment: fixed;
+	}
+	.quotebox  { 
+		font-size: 12px;
+	}
+}
